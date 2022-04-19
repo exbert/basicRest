@@ -1,0 +1,46 @@
+###
+
+# curl -i -H "Content-Type: application/json" -X POST
+#-d '{"title": "How to learn Kotlin", "content": "Resources to learn Kotlin"}'
+#http://localhost:8080/api/posts
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "title": "Kotlin Title",
+  "content": "Learn Kotlin, Learn to live"
+}
+
+###
+
+# curl -i -H 'Accept: application/json' http://localhost:8080/api/posts
+GET http://localhost:8080/api/posts
+Accept: application/json
+
+###
+
+# curl -i -H 'Accept: application/json' http://localhost:8080/api/posts/1
+GET http://localhost:8080/api/posts/1
+Accept: application/json
+
+###
+
+# curl -i -H "Content-Type: application/json" -X PUT
+#-d '{"id":1,"title":"How to learn Kotlin","content":"Resources to learn Kotlin"}'
+#http://localhost:8080/api/posts/1
+PUT http://localhost:8080/api/posts/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "How to learn Kotlin!",
+  "content": "Resources to learn Kotlin!"
+}
+
+###
+
+# curl -i -X DELETE http://localhost:8080/api/posts/1
+DELETE http://localhost:8080/api/posts/1
+
+###
+
